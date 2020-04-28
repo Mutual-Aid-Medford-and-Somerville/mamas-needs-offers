@@ -18,7 +18,7 @@ function parseName(name) {
     return "Anonymous"
   }
 
-  const [first, ...rest] = name.trim().split(" ")
+  const [first, ...rest] = name.trim().split("/\s+/")
   const restInitials = rest.map(n => `${n[0].toUpperCase()}.`)
   return `${first} ${restInitials}`
 }
